@@ -140,7 +140,7 @@ export const Modal: React.FC<ModalProps> = ({
         ref={modalRef}
         tabIndex={-1}
         className={cn(
-          'relative w-full z-50 my-auto rounded-xl border border-border bg-card text-card-foreground shadow-2xl outline-none max-h-[calc(100vh-3rem)] flex flex-col overflow-hidden',
+          'relative w-full z-50 my-auto rounded-xl border border-border bg-card text-card-foreground shadow-2xl outline-none max-h-[calc(100vh-2rem)] flex flex-col overflow-hidden',
           'animate-in fade-in zoom-in-95 duration-150 motion-reduce:animate-none',
           sizeStyles[size],
           className

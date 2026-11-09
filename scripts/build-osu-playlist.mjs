@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * NookSpace — build bundled osu! playlist
  *

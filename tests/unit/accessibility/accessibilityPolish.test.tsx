@@ -14,19 +14,19 @@ describe('Milestone 10.4 — Accessibility & Responsive UX Polish Suite', () => 
   describe('Modal Responsive Container & Focus Trapping', () => {
     it('renders with max-h-[calc(100vh-2rem)] and internal scrolling for small viewports', () => {
       const handleClose = vi.fn();
-      const { container } = render(
+      render(
         <Modal isOpen={true} onClose={handleClose} title="Responsive Modal">
           <div data-testid="modal-content">Long modal text</div>
         </Modal>
       );
 
-      const dialogCard = container.querySelector('[role="dialog"] > div:nth-child(2)');
+      const dialogCard = document.querySelector('[role="dialog"] > div:nth-child(2)');
       expect(dialogCard).not.toBeNull();
       expect(dialogCard?.className).toContain('max-h-[calc(100vh-2rem)]');
       expect(dialogCard?.className).toContain('flex-col');
       expect(dialogCard?.className).toContain('overflow-hidden');
 
-      const bodyContent = container.querySelector('[role="dialog"] .overflow-y-auto');
+      const bodyContent = document.querySelector('[role="dialog"] .overflow-y-auto');
       expect(bodyContent).not.toBeNull();
       expect(bodyContent?.textContent).toContain('Long modal text');
     });
